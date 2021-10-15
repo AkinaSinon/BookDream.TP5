@@ -1,0 +1,226 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+{include file="public/head"}
+<body>
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		
+<!-- Stylesheets -->
+	<link rel="stylesheet" href="__STATIC__/Index/css/bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/Index/css/plugins.css">
+	<link rel="stylesheet" href="__STATIC__/Index/style.css">
+	<link rel="stylesheet" href="__STATIC__/Index/css/style.css">
+	<!-- Cusom css -->
+    <link rel="stylesheet" href="__STATIC__/Index/css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="__STATIC__/Index/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Header -->
+        <header id="wn__header" class="header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
+						<div class="logo">
+							<a href="{:url('Index/Index')}">
+								<img src="__STATIC__/Index/images/logo/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li><a href="{:url('Index/Index')}">首页</a></li>
+								<li><a href="{:url('Showlist/Showlist')}">购物清单</a></li>
+								<!-- <li><a href="{:url('Singleproduct/Singleproduct')}">单品</a></li> -->
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
+						<!--购物车界面 START-->
+						{include file="shopping/reaectCart"}
+						<!--购物车界面 END-->
+					</div>
+				</div>
+					<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="{:url('Index/Index')}">首页</a></li>
+								<li><a href="__STATIC__/Index/ShopList.html">购物清单</a></li>
+								<li><a href="__STATIC__/Index/SingleProduct.html">单品</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->	
+			</div>		
+		</header>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+		<div class="brown--color box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" action="{：url('Honme/Category/find')}">
+				<div class="field__search">
+					<input type="text" placeholder="搜索整个商城...">
+					<div class="action">
+						<a href="#"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+        <!-- Start Slider area -->
+        <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
+        	<!-- Start Single Slide -->
+	        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-lg-12">
+	            			<div class="slider__content">
+		            			<div class="contentbox">
+		            				<h2>寻 <span>覔 </span></h2>
+		            				<h2>最喜爱的 <span>书 </span></h2>
+		            				<h2>从 <span>这里 </span></h2>
+				                   	<a class="shopbtn" href="#">Book(Dream)</a>
+		            			</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </div>
+            </div>
+            <!-- End Single Slide -->
+        	<!-- Start Single Slide -->
+	        <div class="slide animation__style10 bg-image--7 fullscreen align__center--left">
+	            <div class="container">
+	            	<div class="row">
+	            		<div class="col-lg-12">
+	            			<div class="slider__content">
+		            			<div class="contentbox">
+		            				<h2>探 <span>寻 </span></h2>
+		            				<h2>最深刻的 <span>人 </span></h2>
+		            				<h2>从 <span>这里 </span></h2>
+				                   	<a class="shopbtn" href="#">Book(Dream)</a>
+		            			</div>
+	            			</div>
+	            		</div>
+	            	</div>
+	            </div>
+            </div>
+            <!-- End Single Slide -->
+        </div>
+        <!-- End Slider area -->
+		<!-- Start BEst Seller Area -->
+		<section class="wn__product__area brown--color pt--80  pb--30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section__title text-center">
+							<h2 class="title__be--2">新 <span class="color--theme">书上架</span></h2>
+							<p>在这静谧、整洁、明亮又宽敞的真理之门<br/>
+我将一如既往，恪尽职守<br/>将自己毕生的年华<br/>奉献给我最崇敬最可爱的<br/>你啊</p>
+						</div>
+					</div>
+				</div>
+				<!-- Start Single Tab Content -->
+				<div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
+					<!-- New BOOK START-->
+					{include file="Product/newredact"}
+					<!-- New BOOK END-->
+					</div>
+				</div>
+				<!-- End Single Tab Content -->
+			</div>
+		</section>
+		<!-- Start BEst Seller Area -->
+		<!-- Start NEwsletter Area -->
+		<section class="wn__newsletter__area bg-image--2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
+						<div class="section__title text-center">
+							<h2 class="monologue">我们，相遇于此</h2>
+						</div>
+						<div class="newsletter__block text-center">
+							<p>现在就订阅我们的时事通讯，了解最新的收藏、最新的优质图书和独家优惠。</p>
+							<form action="#">
+								<div class="newsletter__box">
+									<input type="email" placeholder="留个邮箱呗(≧∇≦)ﾉ">
+									<button>订阅</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End NEwsletter Area -->
+		<!-- Start Best Seller Area -->
+		<section class="wn__bestseller__area bg--white pt--80  pb--30">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section__title text-center">
+							<h2 class="title__be--2">全部 <span class="color--theme">分类</span></h2>
+							<p>茫茫书海，我万里挑一，这里只为寻得一个合适的你</p>
+						</div>
+					</div>
+				</div>
+				<div class="row mt--50">
+					<div class="col-md-12 col-lg-12 col-sm-12">
+						<div class="product__nav nav justify-content-center" role="tablist">
+                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">全部</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">文学</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">社科</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">生活</a>
+                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">杂志</a>
+                        </div>
+					</div>
+				</div>
+				<div class="tab__container mt--60">
+					<!-- Start Single Tab Content -->
+					<div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
+						<div class="product__indicator--4 arrows_style owl-carousel owl-theme">
+								<!-- ALL BOOK START-->
+								{include file="Product/redact"}
+								<!-- ALL BOOK END-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{include file="public/footer"}
+		<!-- QUICKVIEW PRODUCT -->
+		<div id="quickview-wrapper">
+		    <!-- Modal -->
+		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
+		        <div class="modal-dialog modal__container" role="document">
+		            <div class="modal-content">
+		                <div class="modal-header modal__header">
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                </div>
+		                {include file="public/show"}
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- END QUICKVIEW PRODUCT -->
+	</div>
+	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="__STATIC__/Index/js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="__STATIC__/Index/js/popper.min.js"></script>
+	<script src="__STATIC__/Index/js/bootstrap.min.js"></script>
+	<script src="__STATIC__/Index/js/plugins.js"></script>
+	<script src="__STATIC__/Index/js/active.js"></script>
+	
+</body>
+</html>

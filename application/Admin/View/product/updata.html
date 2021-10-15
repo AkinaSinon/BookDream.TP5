@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品信息管理</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="__STATIC__/Admin/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/style.sea.css" id="theme-stylesheet">
+    <!--BOOKDREAM.CN-->
+    <!-- <link rel="stylesheet" href="__STATIC__/Admin/css/style.bookdream.css"> -->
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="__STATIC__/Admin/img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="__STATIC__/Admin/https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="__STATIC__/Admin/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--HEADER BEGIN-->
+    {include file="Public/head"}
+
+    <div class="d-flex align-items-stretch">
+      <!--Menu BEGIN-->
+      {include file="Public/menu"}
+
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+          
+          <section class="py-5 user-add">
+            <div class="row">
+              <div class="col-lg-8 mb-5" style="min-width: 100% !important; margin-left: -1%;">                           
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="h6 text-uppercase mb-0">商品信息编辑</h3>
+                  </div>
+                  <div class="card-body">
+                    <form class="form-inline" method="post" action="{:url('Product/saved')}">
+                      <input id="inlineFormInput" type="hidden" name="book_id" placeholder="ID" value="{$data.book_id}" class="mr-3 form-control">
+                      <div class="form-group">
+                        <span id="inlineFormInput" class="sr-only">书籍名称</span>
+                        <input id="inlineFormInput" type="text" name="book_name" placeholder="书籍名称" value="{$data.book_name}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="inlineFormInputGroup" class="sr-only">作者</label>
+                        <input id="inlineFormInputGroup" type="text" name="book_writer" placeholder="作者" value="{$data.book_writer}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="inlineFormInputGroup" class="sr-only">出版时间</label>
+                        <input id="inlineFormInputGroup" type="text" name="book_time" placeholder="出版时间" value="{$data.book_time}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="inlineFormInputGroup" class="sr-only">简介</label>
+                        <input id="inlineFormInputGroup" type="text" name="book_test" placeholder="简介" value="{$data.book_test}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="inlineFormInputGroup" class="sr-only">封面</label>
+                        <input id="inlineFormInputGroup" type="text" name="book_image" placeholder="封面" value="{$data.book_image}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <label for="inlineFormInputGroup" class="sr-only">库存</label>
+                        <input hidden="hidden" id="inlineFormInputGroup" type="text" name="book_kucun" placeholder="库存" value="{$data.book_kucun}" class="mr-3 form-control">
+                      </div>
+                      <div class="form-group">
+                        <button type="reset" class="btn btn-primary">重置</button>
+                        &nbsp;
+                        <button type="submit" class="btn btn-primary">保存更新</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!--FOOTER BEGIN-->
+        {include file="Public/footer"}
+      </div>
+    </div>
+    <!-- JavaScript files-->
+    <script src="__STATIC__/Admin/vendor/jquery/jquery.min.js"></script>
+    <script src="__STATIC__/Admin/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="__STATIC__/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__STATIC__/Admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="__STATIC__/Admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="__STATIC__/Admin/js/js.cookie.min.js"></script>
+    <script src="__STATIC__/Admin/js/front.js"></script>
+  </body>
+</html>

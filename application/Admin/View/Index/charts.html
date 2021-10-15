@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Book(Dream)商品信息管理</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="__STATIC__/Admin/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- orion icons-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/orionicons.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="__STATIC__/Admin/css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="__STATIC__/Admin/img/favicon.png?3">
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--HEADER BEGIN-->
+    {include file="Public/head"}
+
+    <div class="d-flex align-items-stretch">
+      <!--Menu BEGIN-->
+      {include file="Public/menu"}  
+
+      <div class="page-holder w-100 d-flex flex-wrap">
+        <div class="container-fluid px-xl-5">
+          <section class="py-5">
+            <div class="row">
+              <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
+                  <div class="flex-grow-1 d-flex align-items-center">
+                    <div class="dot mr-3 bg-violet"></div>
+                    <div class="text">
+                      <h6 class="mb-0">消耗的数据</h6><span class="text-gray">145,14 GB</span>
+                    </div>
+                  </div>
+                  <div class="icon text-white bg-violet"><i class="fas fa-server"></i></div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
+                  <div class="flex-grow-1 d-flex align-items-center">
+                    <div class="dot mr-3 bg-green"></div>
+                    <div class="text">
+                      <h6 class="mb-0">开箱</h6><span class="text-gray">32</span>
+                    </div>
+                  </div>
+                  <div class="icon text-white bg-green"><i class="far fa-clipboard"></i></div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
+                  <div class="flex-grow-1 d-flex align-items-center">
+                    <div class="dot mr-3 bg-blue"></div>
+                    <div class="text">
+                      <h6 class="mb-0">书店订单</h6><span class="text-gray">400</span>
+                    </div>
+                  </div>
+                  <div class="icon text-white bg-blue"><i class="fa fa-dolly-flatbed"></i></div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 mb-4 mb-xl-0">
+                <div class="bg-white shadow roundy p-4 h-100 d-flex align-items-center justify-content-between">
+                  <div class="flex-grow-1 d-flex align-items-center">
+                    <div class="dot mr-3 bg-red"></div>
+                    <div class="text">
+                      <h6 class="mb-0">图书总量</h6><span class="text-gray">12300</span>
+                    </div>
+                  </div>
+                  <div class="icon text-white bg-red"><i class="fas fa-receipt"></i></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="row mb-4">
+              <div class="col-lg-7 mb-4 mb-lg-0">
+                <div class="card">
+                  <div class="card-header">
+                    <h2 class="h6 text-uppercase mb-0">当前服务器正常运行时间</h2>
+                  </div>
+                  <div class="card-body">
+                    <p class="text-gray">&nbsp;想变得强大 &nbsp;想跑好每一次运行.</p>
+                    <div class="chart-holder">
+                      <canvas id="lineChart1" style="max-height: 14rem !important;" class="w-100"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5 mb-4 mb-lg-0 pl-lg-0">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                      <div class="col-lg-5">
+                        <h2 class="mb-0 d-flex align-items-center"><span>86.4</span><span class="dot bg-green d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">工作时间</span>
+                        <hr><small class="text-muted">WORK TIME</small>
+                      </div>
+                      <div class="col-lg-7">
+                        <canvas id="pieChartHome1"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center flex-row">
+                      <div class="col-lg-5">
+                        <h2 class="mb-0 d-flex align-items-center"><span>1.724</span><span class="dot bg-violet d-inline-block ml-3"></span></h2><span class="text-muted text-uppercase small">服务器时间</span>
+                        <hr><small class="text-muted">SERVER TIME</small>
+                      </div>
+                      <div class="col-lg-7">
+                        <canvas id="pieChartHome2"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Begin-占位分隔-->
+          <section class="py-5">
+          </section>
+          <!--END-占位分隔-->
+        </div>
+        <!--FOOTER BEGIN-->
+        {include file="Public/footer"}
+      </div>
+    </div>
+
+    <!-- JavaScript files-->
+    <script src="__STATIC__/Admin/vendor/jquery/jquery.min.js"></script>
+    <script src="__STATIC__/Admin/vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="__STATIC__/Admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__STATIC__/Admin/vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="__STATIC__/Admin/vendor/chart.js/Chart.min.js"></script>
+    <script src="__STATIC__/Admin/js/js.cookie.min.js"></script>
+    <script src="__STATIC__/Admin/js/charts-home.js"></script>
+    <script src="__STATIC__/Admin/js/front.js"></script>
+  </body>
+</html>

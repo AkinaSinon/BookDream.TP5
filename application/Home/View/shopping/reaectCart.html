@@ -1,0 +1,91 @@
+
+<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
+	<li class="shop_search"><a class="search__active" href="#"></a></li>
+	<li class="wishlist"><a href="#"></a></li>
+	<li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">{$count}</span></a>
+		
+		<!-- Start Shopping Cart -->
+		<div class="block-minicart minicart__active">
+			<div class="minicart-content-wrapper">
+				<div class="micart__close">
+					<span>close</span>
+				</div>
+				<div class="items-total d-flex justify-content-between">
+					<span>{$count}项</span>
+					<span>合计</span>
+				</div>
+				<div class="total_amount text-right">
+					<span>￥{$sum}.00</span>
+				</div>
+				<div class="mini_action checkout">
+					<a class="checkout__btn" href="#">结算</a>
+				</div>
+				<div class="single__items">
+					<div class="miniproduct">
+						{foreach $cart as $value}
+						<div class="item01 d-flex">
+							<div class="thumb">
+								<a href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/sm-img/1.jpg" alt="product images"></a>
+							</div>
+							<div class="content">
+
+								<h6><a href="__STATIC__/Index/SingleProduct.html">{$value.book_name}</a></h6>
+								<input type="test" hidden="hidden" name="cart_id" value="{$value.cart_id}">
+								<span class="prize">￥{$value.book_money}</span>
+								<div class="product_prize d-flex justify-content-between">
+									<span class="qun">数量: {$value.book_number}</span>
+									<ul class="d-flex justify-content-end">
+										<!-- <li><a href="#"><i class="zmdi zmdi-settings"></i></a></li> -->
+										<li><a href="{:url('Shopping/delelctCart')}?cart_id={$value['cart_id']}" onclick="javascript:if(confirm('确定删除此货品?')) {return true;}return false;"><i class="zmdi zmdi-delete"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						{/foreach}
+						
+					</div>
+				</div>
+				<div class="mini_action cart">
+					<a class="cart__btn" href="#">购物车</a>
+				</div>
+			</div>
+		</div>
+		<!-- End Shopping Cart -->
+
+	</li>
+	<li class="setting__bar__icon"><a class="setting__active" href="#"></a>
+		<div class="searchbar__content setting__block">
+			<div class="content-inner">
+				<div class="switcher-currency">
+					<strong class="label switcher-label">
+						<span>欢迎<font style="color: #CE7852;">{$value.username}</font></span>
+					</strong>
+					<div class="switcher-options">
+						<div class="switcher-currency-trigger">
+							<span class="currency-trigger">RMB - 软妹币</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="switcher-currency">
+					<strong class="label switcher-label">
+						<span>我的账户</span>
+					</strong>
+					<div class="switcher-options">
+						<div class="switcher-currency-trigger">
+							<div class="setting__menu">
+								<span><a href="{:url('Auser/login')}">我的愿望清单</a></span>
+								<span><a href="{:url('Auser/login')}">登录</a></span>
+								<span><a href="{:url('Auser/add')}">创建一个账户</a></span>
+							</div>
+							<hr>
+					        <strong class="label switcher-label">
+						        <span><a href="{:url('Admin/Index/login')}">后台管理</a></span>
+					        </strong>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>

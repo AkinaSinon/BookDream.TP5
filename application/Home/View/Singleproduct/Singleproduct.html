@@ -1,0 +1,515 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>SingleProduct</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="__STATIC__/Index/css/bootstrap.min.css">
+	<link rel="stylesheet" href="__STATIC__/Index/css/plugins.css">
+	<link rel="stylesheet" href="__STATIC__/Index/css/style.css">
+
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="__STATIC__/Index/css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="__STATIC__/Index/js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="__STATIC__/Index/https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		
+		<!-- Header -->
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
+						<div class="logo">
+							<a href="__STATIC__/Index/Index.html">
+								<img src="__STATIC__/Index/images/logo/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li><a href="{:url('Index/Index')}">首页</a></li>
+								<li><a href="{:url('Showlist/Showlist')}">购物清单</a></li>
+								<!-- <li><a href="{:url('Singleproduct/Singleproduct')}">单品</a></li> -->
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
+						<!--购物车界面 START-->
+						{include file="shopping/reaectCart"}
+						<!--购物车界面 END-->
+					</div>
+				</div>
+				<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="__STATIC__/Index/Index.html">首页</a></li>
+								<li><a href="__STATIC__/Index/ShopList.html">购物清单</a></li>
+								<li><a href="__STATIC__/Index/SingleProduct.html">单品</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->	
+			</div>		
+		</header>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+		<div class="box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" action="#">
+				<div class="field__search">
+					<input type="text" placeholder="Search entire store here...">
+					<div class="action">
+						<a href="#"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">商品类别</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="__STATIC__/Index/Index.html">首页</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">商品类别</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start main Content -->
+        <div class="maincontent bg--white pt--80 pb--55">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-9 col-12">
+        				<div class="wn__single__product">
+        					<div class="row">
+        						<div class="col-lg-6 col-12">
+        							<div class="wn__fotorama__wrapper">
+	        							<div class="fotorama wn__fotorama__action" data-nav="thumbs">
+		        							  <a href="__STATIC__/Index/1.jpg"><img src="__STATIC__/Index/images/product/1.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/2.jpg"><img src="__STATIC__/Index/images/product/2.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/3.jpg"><img src="__STATIC__/Index/images/product/3.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/4.jpg"><img src="__STATIC__/Index/images/product/4.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/5.jpg"><img src="__STATIC__/Index/images/product/5.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/6.jpg"><img src="__STATIC__/Index/images/product/6.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/7.jpg"><img src="__STATIC__/Index/images/product/7.jpg" alt=""></a>
+		        							  <a href="__STATIC__/Index/8.jpg"><img src="__STATIC__/Index/images/product/8.jpg" alt=""></a>
+	        							</div>
+        							</div>
+        						</div>
+        						<div class="col-lg-6 col-12">
+        							<div class="product__info__main">
+        								<h1>达·芬奇密码</h1>
+        								<div class="product-info-stock-sku d-flex">
+        									<p>地区货品:<span> 现货</span></p>
+        									<p>库存:<span> MH01</span></p>
+        								</div>
+        								<div class="product-reviews-summary d-flex">
+        									<ul class="rating-summary d-flex">
+    											<li><i class="zmdi zmdi-star-outline"></i></li>
+    											<li><i class="zmdi zmdi-star-outline"></i></li>
+    											<li><i class="zmdi zmdi-star-outline"></i></li>
+    											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
+    											<li class="off"><i class="zmdi zmdi-star-outline"></i></li>
+        									</ul>
+        									<div class="reviews-actions d-flex">
+        										<a href="#"><strong>评论</strong>99.8%好评<span>(1087人)</span></a>
+        										<a href="#">写评论</a>
+        									</div>
+        								</div>
+        								<div class="price-box">
+        									<span>￥52.00</span>
+        								</div>
+        								<div class="box-tocart d-flex">
+        									<span>数量</span>
+        									<input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number">
+        									<div class="addtocart__actions">
+        										<button class="tocart" type="submit" title="Add to Cart">加入购物车</button>
+        									</div>
+        								</div>
+        								<div class="product-addto-links clearfix">
+        									<a class="wishlist" href="#"></a>
+        									<a class="compare" href="#"></a>
+        									<a class="email" href="#"></a>
+        								</div>
+        								<div class="product__overview">
+        									<p>小说是20世纪后期对诺斯提教派兴趣复兴的一部分。小说的素材主要来自《圣血和圣杯》（原文版小说的第253页区别于其它素材来源，特别提及了这本著作的名字）。有人声称《达芬奇密码》就是取材于20世纪70年代后期英国广播公司（BBC）播放的一组短片的《圣血和圣杯》的传奇演绎版本.</p>
+        									<ul class="pro__attribute">
+        										<li>• 作者:Dan Brown 著</li>
+        										<li>• 出版社:地球文艺出版社 </li>
+        										<li>• 出版时间:2017年10月</li>
+        									</ul>
+        								</div>
+        							</div>
+        						</div>
+        					</div>
+        				</div>
+        				<div class="product__info__detailed">
+							<div class="pro_details_nav nav justify-content-start" role="tablist">
+	                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-details" role="tab">详细</a>
+	                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-review" role="tab">评论</a>
+	                        </div>
+	                        <div class="tab__container">
+	                        	<!-- Start Single Tab Content -->
+	                        	<div class="pro__tab_label tab-pane fade show active" id="nav-details" role="tabpanel">
+									<div class="description__attribute">
+										<p>正在巴黎出差的哈佛大学教授罗伯特·兰登午夜接到匿名电话，得知卢浮宫博物馆馆长雅克·索尼埃被害，于是应召来到博物馆，对一系列与达·芬奇的艺术作品有关联的神秘符号进行分析和调查。在与索尼埃的孙女、密码破译天才索菲·奈芙联手对诸多奇形怪状的符号及密码进行整理的过程中，他发现一连串的线索就隐藏在达·芬奇的艺术作品当中。他发现了能解开历史上难解之谜的一把钥匙，并与奈芙跟一位神秘的幕后操纵者展开了斗智斗勇的角逐，而他自己也因此成为一名被追逐者。除非他们能解开这个错综复杂的谜，否则，郇山隐修会苦心掩盖的惊天大秘密以及令人震惊的古老真相，终将永远消失.</p>
+										<ul>
+											<li>• 作者:Dan Brown 著</li>
+        									<li>• 出版社:地球文艺出版社 </li>
+        									<li>• 出版时间:2017年10月</li>
+										</ul>
+									</div>
+	                        	</div>
+	                        	<!-- End Single Tab Content -->
+	                        	<!-- Start Single Tab Content -->
+	                        	<div class="pro__tab_label tab-pane fade" id="nav-review" role="tabpanel">
+									<div class="review__attribute">
+										<h1>商品评论</h1>
+										<!-- <h2>查理布朗</h2> -->
+										<div class="review__ratings__type d-flex">
+											<div class="review-ratings">
+												<div class="rating-summary d-flex">
+													<span>质量</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+
+												<div class="rating-summary d-flex">
+													<span>价格</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="rating-summary d-flex">
+													<span>价值</span>
+			    									<ul class="rating d-flex">
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="review-fieldset">
+										<h2>您的评论:</h2>
+										<h3>《达·芬奇密码》</h3>
+										<div class="review-field-ratings">
+											<div class="product-review-table">
+												<div class="review-field-rating d-flex">
+													<span>质量</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="review-field-rating d-flex">
+													<span>价格</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+												<div class="review-field-rating d-flex">
+													<span>价值</span>
+													<ul class="rating d-flex">
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+														<li class="off"><i class="zmdi zmdi-star"></i></li>
+			    									</ul>
+												</div>
+											</div>
+										</div>
+										<div class="review_form_field">
+											<div class="input__box">
+												<span>昵称</span>
+												<input id="nickname_field" type="text" name="nickname">
+											</div>
+											<div class="input__box">
+											<div class="input__box">
+												<span>点评</span>
+												<textarea name="review"></textarea>
+											</div>
+											<span>添加图片</span>
+												<input id="summery_field" type="text" name="summery">
+											</div>
+											<div class="review-form-actions">
+												<button>发表评论</button>
+											</div>
+										</div>
+									</div>
+	                        	</div>
+	                        	<!-- End Single Tab Content -->
+	                        </div>
+        				</div>
+						
+					
+        			</div>
+        			<div class="col-lg-3 col-12 md-mt-40 sm-mt-40">
+        				<div class="shop__sidebar">
+        					<aside class="wedget__categories poroduct--cat">
+        						<h3 class="wedget__title">商品类别</h3>
+        						<ul>
+        							<li><a href="#">传记 <span>(3)</span></a></li>
+        							<li><a href="#">商务 <span>(4)</span></a></li>
+        							<li><a href="#">烹饪 <span>(6)</span></a></li>
+        							<li><a href="#">健康&健身 <span>(7)</span></a></li>
+        							<li><a href="#">历史 <span>(8)</span></a></li>
+        							<li><a href="#">推理 <span>(9)</span></a></li>
+        							<li><a href="#">灵感<span>(13)</span></a></li>
+        							<li><a href="#">浪漫 <span>(20)</span></a></li>
+        							<li><a href="#">小说/幻想 <span>(22)</span></a></li>
+        							<li><a href="#">自我完善 <span>(13)</span></a></li>
+        							<li><a href="#">黑色幽默 <span>(17)</span></a></li>
+        							<li><a href="#">哈利波特 <span>(20)</span></a></li>
+        							<li><a href="#">乡土故事 <span>(34)</span></a></li>
+        							<li><a href="#">儿童音乐 <span>(60)</span></a></li>
+        							<li><a href="#">玩具&游戏 <span>(3)</span></a></li>
+        							<li><a href="#">时尚 <span>(3)</span></a></li>
+        						</ul>
+        					</aside>
+        					<aside class="wedget__categories poroduct--tag">
+        						<h3 class="wedget__title">产品标签</h3>
+        						<ul>
+        							<li><a href="#">传记</a></li>
+        							<li><a href="#">商务</a></li>
+        							<li><a href="#">烹饪</a></li>
+        							<li><a href="#">健康&健身</a></li>
+        							<li><a href="#">历史</a></li>
+        							<li><a href="#">推理</a></li>
+        							<li><a href="#">灵感</a></li>
+        							<li><a href="#">宗教</a></li>
+        							<li><a href="#">小说</a></li>
+        							<li><a href="#">幻想</a></li>
+        							<li><a href="#">音乐</a></li>
+        							<li><a href="#">玩具</a></li>
+        							<li><a href="#">时尚</a></li>
+        						</ul>
+        					</aside>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- End main Content -->
+		
+		<!-- Start NEwsletter Area -->
+		<section class="wn__newsletter__area bg-image--2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
+						<div class="section__title text-center">
+							<h2 class="monologue">我们，相遇于此</h2>
+						</div>
+						<div class="newsletter__block text-center">
+							<p>现在就订阅我们的时事通讯，了解最新的收藏、最新的优质图书和独家优惠。</p>
+							<form action="#">
+								<div class="newsletter__box">
+									<input type="email" placeholder="留个邮箱呗(≧∇≦)ﾉ">
+									<button>订阅</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End NEwsletter Area -->
+		
+		<!-- Footer Area -->
+		<footer id="wn__footer" class="footer__area bg__cat--8 brown--color">
+			<div class="footer-static-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="footer__widget footer__menu">
+								<div class="ft__logo">
+									<a href="__STATIC__/Index/Index.html">
+										<img src="__STATIC__/Index/images/logo/3.png" alt="logo">
+									</a>
+									<p>我们有过太多太多的想法 而实现的去又太少太少 犹如<strong class="monologue">书里梦想</strong>只是被述说 被理想 迷途过落化为 <strong>Book(Dream) </strong> 悄然即逝</p>
+								</div>
+								<div class="footer__content">
+									<ul class="social__net social__net--2 d-flex justify-content-center">
+										<li><a href="#"><i class="bi bi-facebook"></i></a></li>
+										<li><a href="#"><i class="bi bi-google"></i></a></li>
+										<li><a href="#"><i class="bi bi-twitter"></i></a></li>
+										<li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+										<li><a href="#"><i class="bi bi-youtube"></i></a></li>
+									</ul>
+									<ul class="mainmenu d-flex justify-content-center">
+										<li><a href="{:url('Index/Index')}">关于我们</a></li>
+										<li><a href="{:url('Index/Index')}">加入我们</a></li>
+										<li><a href="{:url('Index/Index')}">广告服务</a></li>
+										<li><a href="{:url('Index/Index')}">免责</a></li>
+										<li><a href="{:url('Index/Index')}">友情链接</a></li>
+										<!-- <li><a href="{:url('Index/Index')}"></a></li> -->
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright__wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="copyright">
+								<div class="copy__right__inner text-left">
+									<p>BookDream.cn &copy; 软件与信息服务 2019 ALL RIGHTS RESERVED.<a href="http://www.miitbeian.gov.cn/" target="_blank">蒙ICP备1744010RX号 </a></p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12">
+							<div class="payment text-right">
+								<img src="__STATIC__/Index/images/icons/payment.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- //Footer Area -->
+		<!-- QUICKVIEW PRODUCT -->
+		<div id="quickview-wrapper">
+		    <!-- Modal -->
+		    <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
+		        <div class="modal-dialog modal__container" role="document">
+		            <div class="modal-content">
+		                <div class="modal-header modal__header">
+		                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                </div>
+		                <div class="modal-body">
+		                    <div class="modal-product">
+		                        <!-- Start product images -->
+		                        <div class="product-images">
+		                            <div class="main-image images">
+		                                <img alt="big images" src="__STATIC__/Index/images/product/big-img/1.jpg">
+		                            </div>
+		                        </div>
+		                        <!-- end product images -->
+		                        <div class="product-info">
+		                            <h1>皇帝的新布袋书</h1>
+		                            <div class="rating__and__review">
+		                                <ul class="rating">
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                    <li><span class="ti-star"></span></li>
+		                                </ul>
+		                                <div class="review">
+		                                    <a href="#">用户评论(4)</a>
+		                                </div>
+		                            </div>
+		                            <div class="price-box-3">
+		                                <div class="s-price-box">
+		                                    <span class="new-price">￥57.20</span>
+		                                    <span class="old-price">￥45.00</span>
+		                                </div>
+		                            </div>
+		                            <div class="quick-desc">
+		                                为了纪念非酋国十一世皇帝，而全球限量发售的纺织图书，由优质帆布手工编制成图书封面，内纸质采用24K纯手工压制，修边精美，文体采用文艺复新流去撰写，堪称时代的典范，设计之精品,当然这些只有Smart的人才能看得见.
+		                            </div>
+		                            <div class="select__size">
+		                                <h2>尺码</h2>
+		                                <ul class="color__list">
+		                                    <li class="l__size"><a title="L" href="#">L</a></li>
+		                                    <li class="m__size"><a title="M" href="#">M</a></li>
+		                                    <li class="s__size"><a title="S" href="#">S</a></li>
+		                                    <li class="xl__size"><a title="XL" href="#">XL</a></li>
+		                                    <li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
+		                                </ul>
+		                            </div>
+		                            <div class="social-sharing">
+		                                <div class="widget widget_socialsharing_widget">
+		                                    <h3 class="widget-title-modal">分享</h3>
+		                                    <ul class="social__net social__net--2 d-flex justify-content-start">
+		                                        <li class="facebook"><a href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
+		                                        <li class="linkedin"><a href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
+		                                        <li class="pinterest"><a href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+		                                        <li class="tumblr"><a href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+		                            <div class="addtocart-btn">
+		                                <a href="#">加入购物车</a>
+		                            </div>
+		                        </div><!-- .product-info -->
+		                    </div><!-- .modal-product -->
+		                </div><!-- .modal-body -->
+		            </div><!-- .modal-content -->
+		        </div><!-- .modal-dialog -->
+		    </div>
+		    <!-- END Modal -->
+		</div>
+		<!-- END QUICKVIEW PRODUCT -->
+
+	</div>
+	<!-- //Main wrapper -->
+
+	
+
+	<!-- JS Files -->
+	<script src="__STATIC__/Index/js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="__STATIC__/Index/js/popper.min.js"></script>
+	<script src="__STATIC__/Index/js/bootstrap.min.js"></script>
+	<script src="__STATIC__/Index/js/plugins.js"></script>
+	<script src="__STATIC__/Index/js/active.js"></script>
+	
+</body>
+</html>

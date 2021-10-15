@@ -1,0 +1,786 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+{include file="public/head"}
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="__STATIC__/Index/https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		
+		<!-- Header -->
+		<header id="wn__header" class="oth-page header__area header__absolute sticky__header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-7 col-lg-2">
+						<div class="logo">
+							<a href="__STATIC__/Index/Index.html">
+								<img src="__STATIC__/Index/images/logo/logo.png" alt="logo images">
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-8 d-none d-lg-block">
+						<nav class="mainmenu__nav">
+							<ul class="meninmenu d-flex justify-content-start">
+								<li><a href="{:url('Index/Index')}">首页</a></li>
+								<li><a href="{:url('Showlist/Showlist')}">购物清单</a></li>
+								<li><a href="{:url('Singleproduct/Singleproduct')}">单品</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-8 col-sm-8 col-5 col-lg-2">
+						<!--购物车界面 START-->
+						{include file="shopping/reaectCart"}
+						<!--购物车界面 END-->
+					</div>
+				</div>
+				<!-- Start Mobile Menu -->
+				<div class="row d-none">
+					<div class="col-lg-12 d-none">
+						<nav class="mobilemenu__nav">
+							<ul class="meninmenu">
+								<li><a href="__STATIC__/Index/Index.html">首页</a></li>
+								<li><a href="__STATIC__/Index/ShopList.html">商品清单</a></li>
+								<!-- <li><a href="__STATIC__/Index/SingleProduct.html">单品</a></li> -->
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- End Mobile Menu -->
+	            <div class="mobile-menu d-block d-lg-none">
+	            </div>
+	            <!-- Mobile Menu -->	
+			</div>		
+		</header>
+		<!-- //Header -->
+		<!-- Start Search Popup -->
+		<div class="box-search-content search_active block-bg close__top">
+			<form id="search_mini_form" class="minisearch" action="#">
+				<div class="field__search">
+					<input type="text" placeholder="搜索整个商城...">
+					<div class="action">
+						<a href="#"><i class="zmdi zmdi-search"></i></a>
+					</div>
+				</div>
+			</form>
+			<div class="close__wrap">
+				<span>close</span>
+			</div>
+		</div>
+		<!-- End Search Popup -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                        	<h2 class="bradcaump-title">商品类别</h2>
+                            <nav class="bradcaump-content">
+                              <a class="breadcrumb_item" href="__STATIC__/Index/Index.html">首页</a>
+                              <span class="brd-separetor">/</span>
+                              <span class="breadcrumb_item active">商品类别</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- Start Shop Page -->
+        <div class="page-shop-sidebar left--sidebar bg--white section-padding--lg">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-lg-3 col-12 order-2 order-lg-1 md-mt-40 sm-mt-40">
+        				<div class="shop__sidebar">
+        					<aside class="wedget__categories poroduct--cat">
+        						<h3 class="wedget__title">商品类别</h3>
+        						<ul>
+        							<li><a href="#">传记 <span>(3)</span></a></li>
+        							<li><a href="#">商务 <span>(4)</span></a></li>
+        							<li><a href="#">烹饪 <span>(6)</span></a></li>
+        							<li><a href="#">健康&健身 <span>(7)</span></a></li>
+        							<li><a href="#">历史 <span>(8)</span></a></li>
+        							<li><a href="#">推理 <span>(9)</span></a></li>
+        							<li><a href="#">灵感<span>(13)</span></a></li>
+        							<li><a href="#">浪漫 <span>(20)</span></a></li>
+        						</ul>
+        					</aside>
+        					
+        					<aside class="wedget__categories poroduct--tag">
+        						<h3 class="wedget__title">产品标签</h3>
+        						<ul>
+        							<li><a href="#">传记</a></li>
+        							<li><a href="#">商务</a></li>
+        							<li><a href="#">烹饪</a></li>
+        							<li><a href="#">健康&健身</a></li>
+        							<li><a href="#">历史</a></li>
+        							<li><a href="#">推理</a></li>
+        							<li><a href="#">灵感</a></li>
+        							<li><a href="#">宗教</a></li>
+        							<li><a href="#">小说</a></li>
+        							<li><a href="#">幻想</a></li>
+        							<li><a href="#">音乐</a></li>
+        							<li><a href="#">玩具</a></li>
+        							<li><a href="#">时尚</a></li>
+        						</ul>
+        					</aside>
+        					<aside class="wedget__categories sidebar--banner">
+								<img src="__STATIC__/Index/images/others/banner_left.jpg" alt="banner images">
+								<div class="text">
+									<h2>新产品</h2>
+									<h6>低至<br> <strong>40%</strong>起</h6>
+								</div>
+        					</aside>
+        				</div>
+        			</div>
+        			<div class="col-lg-9 col-12 order-1 order-lg-2">
+        				<div class="row">
+        					<div class="col-lg-12">
+								<div class="shop__list__wrapper d-flex flex-wrap flex-md-nowrap justify-content-between">
+									<div class="shop__list nav justify-content-center" role="tablist">
+			                            <a class="nav-item nav-link" data-toggle="tab" href="#nav-grid" role="tab"><i class="fa fa-th"></i></a>
+			                            <a class="nav-item nav-link active" data-toggle="tab" href="#nav-list" role="tab"><i class="fa fa-list"></i></a>
+			                        </div>
+			                        <p>显示40个结果中的1-12个</p>
+			                        <div class="orderby__wrapper">
+			                        	<span>排序</span>
+			                        	<select class="shot__byselect">
+			                        		<option>默认排序</option>
+			                        		<option>耳机</option>
+			                        		<option>家具</option>
+			                        		<option>珠宝</option>
+			                        		<option>工艺</option>
+			                        		<option>儿童</option>
+			                        	</select>
+			                        </div>
+		                        </div>
+        					</div>
+        				</div>
+        				<div class="tab__container">
+	        				<div class="shop-grid tab-pane fade" id="nav-grid" role="tabpanel">
+	        					<div class="row">
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/1.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/8.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">New</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Voyage Yoga Bag</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/3.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Impulse Duffle</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/4.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥60.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Beginner's Yoga</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/5.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/7.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/6.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/3.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/7.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">new</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/8.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/4.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">New</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥70.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Impulse Duffle</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/9.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/10.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">new</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/11.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/4.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">New</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥70.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Impulse Duffle</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+		        					<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+			        					<div class="product">
+			        						<div class="product__thumb">
+			        							<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/12.jpg" alt="product image"></a>
+			        							<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product image"></a>
+			        							<div class="new__box">
+			        								<span class="new-label">Hot</span>
+			        							</div>
+			        							<ul class="prize position__right__bottom d-flex">
+			        								<li>￥40.00</li>
+			        								<li class="old_prize">￥55.00</li>
+			        							</ul>
+			        							<div class="action">
+			        								<div class="actions_inner">
+			        									<ul class="add_to_links">
+			        										<li><a class="cart" href="#"></a></li>
+			        										<li><a class="wishlist" href="#"></a></li>
+			        										<li><a class="compare" href="__STATIC__/Index/compare.html"></a></li>
+			        										<li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
+			        									</ul>
+			        								</div>
+			        							</div>
+			        						</div>
+			        						<div class="product__content">
+			        							<h4><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h4>
+			        							<ul class="rating d-flex">
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li class="on"><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        								<li><i class="fa fa-star-o"></i></li>
+			        							</ul>
+			        						</div>
+			        					</div>
+		        					</div>
+		        					<!-- End Single Product -->
+	        					</div>
+	        					<ul class="wn__pagination">
+	        						<li class="active"><a href="#">1</a></li>
+	        						<li><a href="#">2</a></li>
+	        						<li><a href="#">3</a></li>
+	        						<li><a href="#">4</a></li>
+	        						<li><a href="#"><i class="zmdi zmdi-chevron-right"></i></a></li>
+	        					</ul>
+	        				</div>
+	        				<div class="shop-grid tab-pane fade show active" id="nav-list" role="tabpanel">
+	        					<div class="list__view__wrapper">
+	        						<!-- Start Single Product -->
+	        						<div class="list__view">
+	        							<div class="thumb">
+	        								<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/1.jpg" alt="product images"></a>
+	        								<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product images"></a>
+	        							</div>
+	        							<div class="content">
+	        								<h2><a href="__STATIC__/Index/SingleProduct.html">adipiscing</a></h2>
+	        								<ul class="rating d-flex">
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        								</ul>
+	        								<ul class="prize__box">
+	        									<li>￥111.00</li>
+	        									<li class="old__prize">￥220.00</li>
+	        								</ul>
+	        								<p>他们悲伤地坐着，安慰着他们。南是个悲伤的卖主。丹尼并不自由。我爱你，我爱你，我爱你。不要告诉我，不要告诉我该怎么做，不要告诉我该怎么做。</p>
+	        								<ul class="cart__action d-flex">
+	        									<li class="cart"><a href="#">加入购物车</a></li>
+	        									<li class="wishlist"><a href="#"></a></li>
+	        									<li class="compare"><a href="#"></a></li>
+	        								</ul>
+
+	        							</div>
+	        						</div>
+	        						<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+	        						<div class="list__view mt--40">
+	        							<div class="thumb">
+	        								<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/2.jpg" alt="product images"></a>
+	        								<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/4.jpg" alt="product images"></a>
+	        							</div>
+	        							<div class="content">
+	        								<h2><a href="__STATIC__/Index/SingleProduct.html">Voyage Yoga Bag</a></h2>
+	        								<ul class="rating d-flex">
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        								</ul>
+	        								<ul class="prize__box">
+	        									<li>￥111.00</li>
+	        									<li class="old__prize">￥220.00</li>
+	        								</ul>
+	        								<p>他们悲伤地坐着，安慰着他们。南是个悲伤的卖主。丹尼并不自由。我爱你，我爱你，我爱你。不要告诉我，不要告诉我该怎么做，不要告诉我该怎么做。</p>
+	        								<ul class="cart__action d-flex">
+	        									<li class="cart"><a href="#">加入购物车</a></li>
+	        									<li class="wishlist"><a href="#"></a></li>
+	        									<li class="compare"><a href="#"></a></li>
+	        								</ul>
+
+	        							</div>
+	        						</div>
+	        						<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+	        						<div class="list__view mt--40">
+	        							<div class="thumb">
+	        								<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/3.jpg" alt="product images"></a>
+	        								<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/6.jpg" alt="product images"></a>
+	        							</div>
+	        							<div class="content">
+	        								<h2><a href="__STATIC__/Index/SingleProduct.html">Impulse Duffle</a></h2>
+	        								<ul class="rating d-flex">
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        								</ul>
+	        								<ul class="prize__box">
+	        									<li>￥111.00</li>
+	        									<li class="old__prize">￥220.00</li>
+	        								</ul>
+	        								<p>他们悲伤地坐着，安慰着他们。南是个悲伤的卖主。丹尼并不自由。我爱你，我爱你，我爱你。不要告诉我，不要告诉我该怎么做，不要告诉我该怎么做。</p>
+	        								<ul class="cart__action d-flex">
+	        									<li class="cart"><a href="#">加入购物车</a></li>
+	        									<li class="wishlist"><a href="#"></a></li>
+	        									<li class="compare"><a href="#"></a></li>
+	        								</ul>
+
+	        							</div>
+	        						</div>
+	        						<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+	        						<div class="list__view mt--40">
+	        							<div class="thumb">
+	        								<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/4.jpg" alt="product images"></a>
+	        								<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/6.jpg" alt="product images"></a>
+	        							</div>
+	        							<div class="content">
+	        								<h2><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h2>
+	        								<ul class="rating d-flex">
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        								</ul>
+	        								<ul class="prize__box">
+	        									<li>￥111.00</li>
+	        									<li class="old__prize">￥220.00</li>
+	        								</ul>
+	        								<p>他们悲伤地坐着，安慰着他们。南是个悲伤的卖主。丹尼并不自由。我爱你，我爱你，我爱你。不要告诉我，不要告诉我该怎么做，不要告诉我该怎么做。</p>
+	        								<ul class="cart__action d-flex">
+	        									<li class="cart"><a href="#">加入购物车</a></li>
+	        									<li class="wishlist"><a href="#"></a></li>
+	        									<li class="compare"><a href="#"></a></li>
+	        								</ul>
+	        							</div>
+	        						</div>
+	        						<!-- End Single Product -->
+	        						<!-- Start Single Product -->
+	        						<div class="list__view mt--40">
+	        							<div class="thumb">
+	        								<a class="first__img" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/5.jpg" alt="product images"></a>
+	        								<a class="second__img animation1" href="__STATIC__/Index/SingleProduct.html"><img src="__STATIC__/Index/images/product/9.jpg" alt="product images"></a>
+	        							</div>
+	        							<div class="content">
+	        								<h2><a href="__STATIC__/Index/SingleProduct.html">Strive Shoulder Pack</a></h2>
+	        								<ul class="rating d-flex">
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li class="on"><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        									<li><i class="fa fa-star-o"></i></li>
+	        								</ul>
+	        								<ul class="prize__box">
+	        									<li>￥111.00</li>
+	        									<li class="old__prize">￥220.00</li>
+	        								</ul>
+	        								<p>他们悲伤地坐着，安慰着他们。南是个悲伤的卖主。丹尼并不自由。我爱你，我爱你，我爱你。不要告诉我，不要告诉我该怎么做，不要告诉我该怎么做。</p>
+	        								<ul class="cart__action d-flex">
+	        									<li class="cart"><a href="#">加入购物车</a></li>
+	        									<li class="wishlist"><a href="#"></a></li>
+	        									<li class="compare"><a href="#"></a></li>
+	        								</ul>
+
+	        							</div>
+	        						</div>
+	        						<!-- End Single Product -->
+	        					</div>
+	        				</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- End Shop Page -->
+		{include file="public/footer"}
+		<!-- //Footer Area -->
+
+		</div>
+		<!-- //Main wrapper -->
+
+		<!-- JS Files -->
+		<script src="__STATIC__/Index/js/vendor/jquery-3.2.1.min.js"></script>
+		<script src="__STATIC__/Index/js/popper.min.js"></script>
+		<script src="__STATIC__/Index/js/bootstrap.min.js"></script>
+		<script src="__STATIC__/Index/js/plugins.js"></script>
+		<script src="__STATIC__/Index/js/active.js"></script>
+		
+	</body>
+	</html>
